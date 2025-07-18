@@ -68,7 +68,7 @@ Por segurança, o projeto utiliza o sistema de segredos do Streamlit.
 Com as dependências instaladas e a chave de API configurada, execute o seguinte comando no seu terminal:
 
 ```bash
-streamlit run app.py
+streamlit run appAEGia.py
 ```
 
 A aplicação será aberta automaticamente no seu navegador padrão.
