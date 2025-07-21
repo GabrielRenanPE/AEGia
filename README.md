@@ -1,106 +1,80 @@
-# 🤖 Assistente de Vendas com IA - AEGia
-
-## 📝 Descrição do Projeto
-
-**AEGia** é um assistente de vendas inteligente, desenvolvido como um protótipo funcional para o "Teste Prático - Desenvolvimento de Projeto com IA". O objetivo do projeto é demonstrar o uso estratégico e criativo da Inteligência Artificial em um contexto de negócio real.
+🤖 Assistente de Vendas com IA - AEGia
+📝 Descrição do Projeto
+AEGia é um assistente de vendas inteligente, desenvolvido como um protótipo funcional para o "Teste Prático - Desenvolvimento de Projeto com IA". O objetivo do projeto é demonstrar o uso estratégico e criativo da Inteligência Artificial em um contexto de negócio real.
 
 A aplicação funciona como um chatbot consultivo para uma empresa fictícia de cursos de marketing automotivo. A IA, nomeada "AEGia", interage com os usuários para entender seus objetivos, qualificar seu perfil e recomendar o curso mais adequado de um catálogo pré-definido.
 
-## ✨ Funcionalidades Principais
+✨ Funcionalidades Principais
+Consultoria Educacional Personalizada: A IA analisa os objetivos e o perfil do usuário para recomendar o curso ideal.
 
-  * [cite\_start]**Consultoria Educacional Personalizada:** A IA analisa os objetivos e o perfil do usuário para recomendar o curso ideal[cite: 1].
-  * [cite\_start]**Qualificação de Leads:** O assistente faz perguntas estratégicas para qualificar o interesse e a necessidade do cliente antes de fazer uma recomendação[cite: 1].
-  * [cite\_start]**Base de Conhecimento Própria:** A IA utiliza um catálogo de cursos específico como sua única fonte de verdade, garantindo que as recomendações sejam sempre relevantes para o negócio[cite:1].
-  * [cite\_start]**Redirecionamento para Vendas:** Após a recomendação e o interesse do usuário, o assistente fornece um link direto para a equipe de vendas no WhatsApp, finalizando o processo de qualificação[cite: 1].
-  * **Interface de Chat Intuitiva:** Construído com Streamlit, o projeto oferece uma experiência de usuário limpa e amigável.
+Qualificação de Leads: O assistente faz perguntas estratégicas para qualificar o interesse e a necessidade do cliente.
 
-## 🛠️ Tecnologias Utilizadas
+Base de Conhecimento Própria: A IA utiliza um catálogo de cursos específico como sua única fonte de verdade, garantindo recomendações relevantes.
 
-  * **Linguagem:** Python
-  * **Framework da Aplicação:** Streamlit
-  * **Inteligência Artificial:** Google Gemini (via API `google-generativeai`)
+Redirecionamento para Vendas: Após a recomendação, o assistente fornece um link direto para a equipe de vendas no WhatsApp.
 
-## 🔑 Configuração da Chave de API
-Este projeto necessita de uma chave de API para funcionar corretamente, pois ele se comunica com API do Google.
+Interface de Chat Intuitiva: Construído com Streamlit para uma experiência de usuário limpa e amigável.
 
-Para garantir a segurança e não expor suas credenciais, a chave deve ser armazenada em um arquivo de ambiente local. Siga os passos abaixo.
+🛠️ Tecnologias Utilizadas
 
-Passos para Configuração
-Obtenha sua Chave: Primeiro, você precisa ter uma chave de API válida. Obtenha a sua no link: https://aistudio.google.com/welcome
+Linguagem: Python
 
-Crie o Arquivo de Ambiente: Na raiz do projeto, há um arquivo de exemplo chamado .env.example. Ele serve como um molde. Faça uma cópia deste arquivo e renomeie-a para .env.
+Framework da Aplicação: Streamlit
 
-Você pode fazer isso no seu terminal com o comando:
+Inteligência Artificial: Google Gemini (via API google-generativeai)
 
-Bash
+⚙️ Guia de Instalação e Execução
+Para executar este projeto em seu ambiente local, siga os passos abaixo.
 
-cp .env.example .env
+1. Pré-requisitos
+Antes de começar, certifique-se de que você tem:
 
-Insira sua Chave: Abra o novo arquivo .env com seu editor de texto. Você verá uma linha parecida com esta:
+Python 3.8 ou superior instalado.
 
-Bash
+Git instalado em sua máquina.
 
-API_KEY=
+Uma chave de API do Google AI Studio. Se não tiver uma, você pode obtê-la gratuitamente aqui.
 
-Cole a sua chave de API logo após o sinal de =. O resultado deve ser algo como:
+2. Clone o Repositório
+Abra seu terminal e clone este repositório para sua máquina local.
 
 Bash
 
-API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+git clone https://github.com/GabrielRenanPE/AEGia.git
+cd AEGia
+3. Instale as Dependências
+Com o ambiente virtual de sua preferência ativado, instale todas as bibliotecas necessárias com um único comando:
 
-E pronto! A aplicação está configurada para ler essa chave de forma segura sem que ela seja enviada para o GitHub.
+Bash
 
-## ⚙️ Instalação e Configuração
-
-Para executar este projeto localmente, siga os passos abaixo.
-
-### 1\. Pré-requisitos
-
-  - Python 3.8 ou superior
-  - Uma chave de API do [Google AI Studio](https://aistudio.google.com/app/apikey)
-
-### 2\. Clone o Repositório
-
-```bash
-git clone https://github.com/seu-usuario/nome-do-repositorio.git
-cd nome-do-repositorio
-```
-
-### 3\. Instale as Dependências
-
-```bash
 pip install -r requirements.txt
-```
+4. Configure sua Chave de API (Passo Crucial)
+Para que a aplicação possa se conectar à IA do Google, você precisa configurar sua chave de API de forma segura usando o sistema de segredos nativo do Streamlit.
 
-*Obs: Se não houver um arquivo `requirements.txt`, você pode instalar as bibliotecas manualmente:*
+Na raiz do projeto, crie uma pasta chamada .streamlit.
 
-```bash
-pip install streamlit google-generativeai
-```
+Bash
 
-### 4\. Configure sua Chave de API
+mkdir .streamlit
+Dentro desta nova pasta, crie um arquivo chamado secrets.toml.
 
-Por segurança, o projeto utiliza o sistema de segredos do Streamlit.
+Bash
 
-1.  Crie uma pasta na raiz do projeto chamada `.streamlit`.
+# No Windows, você pode usar:
+# type nul > .streamlit\secrets.toml
+# No Linux/macOS, você pode usar:
+# touch .streamlit/secrets.toml
+Abra o arquivo .streamlit/secrets.toml e adicione sua chave de API no seguinte formato:
 
-2.  Dentro desta pasta, crie um arquivo chamado `secrets.toml`.
+Ini, TOML
 
-3.  Adicione sua chave de API do Google ao arquivo da seguinte forma:
+# Substitua o texto pela sua chave de API real
+GOOGLE_API_KEY = "SUA_CHAVE_DE_API_AQUI"
+Importante: O diretório .streamlit não deve ser enviado para o GitHub. O arquivo .gitignore do projeto já está configurado para ignorá-lo, garantindo a segurança de sua chave.
 
-    ```toml
-    # .streamlit/secrets.toml
-    GOOGLE_API_KEY = "SUA_CHAVE_API_AQUI"
-    ```
+5. Execute a Aplicação
+Com tudo configurado, inicie o servidor do Streamlit com o comando:
 
-## 🚀 Como Executar
+Bash
 
-Com as dependências instaladas e a chave de API configurada, execute o seguinte comando no seu terminal:
-
-```bash
 streamlit run appAEGia.py
-```
-
-A aplicação será aberta automaticamente no seu navegador padrão.
-
------
