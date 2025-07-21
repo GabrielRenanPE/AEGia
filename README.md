@@ -20,6 +20,33 @@ A aplicação funciona como um chatbot consultivo para uma empresa fictícia de 
   * **Framework da Aplicação:** Streamlit
   * **Inteligência Artificial:** Google Gemini (via API `google-generativeai`)
 
+## 🔑 Configuração da Chave de API
+Este projeto necessita de uma chave de API para funcionar corretamente, pois ele se comunica com API do Google.
+
+Para garantir a segurança e não expor suas credenciais, a chave deve ser armazenada em um arquivo de ambiente local. Siga os passos abaixo.
+
+Passos para Configuração
+Obtenha sua Chave: Primeiro, você precisa ter uma chave de API válida. Obtenha a sua no link: https://aistudio.google.com/welcome
+
+Crie o Arquivo de Ambiente: Na raiz do projeto, há um arquivo de exemplo chamado .env.example. Ele serve como um molde. Faça uma cópia deste arquivo e renomeie-a para .env.
+
+Você pode fazer isso no seu terminal com o comando:
+
+Bash
+
+cp .env.example .env
+Insira sua Chave: Abra o novo arquivo .env com seu editor de texto. Você verá uma linha parecida com esta:
+
+Bash
+
+API_KEY=
+Cole a sua chave de API logo após o sinal de =. O resultado deve ser algo como:
+
+Bash
+
+API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+E pronto! A aplicação está configurada para ler essa chave de forma segura sem que ela seja enviada para o GitHub.
+
 ## ⚙️ Instalação e Configuração
 
 Para executar este projeto localmente, siga os passos abaixo.
