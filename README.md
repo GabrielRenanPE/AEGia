@@ -1,10 +1,10 @@
-🤖 Assistente de Vendas com IA - AEGia
-📝 Descrição do Projeto
+## 🤖 Assistente de Vendas com IA - AEGia
+## 📝 Descrição do Projeto
 AEGia é um assistente de vendas inteligente, desenvolvido como um protótipo funcional para o "Teste Prático - Desenvolvimento de Projeto com IA". O objetivo do projeto é demonstrar o uso estratégico e criativo da Inteligência Artificial em um contexto de negócio real.
 
 A aplicação funciona como um chatbot consultivo para uma empresa fictícia de cursos de marketing automotivo. A IA, nomeada "AEGia", interage com os usuários para entender seus objetivos, qualificar seu perfil e recomendar o curso mais adequado de um catálogo pré-definido.
 
-✨ Funcionalidades Principais
+## ✨ Funcionalidades Principais
 Consultoria Educacional Personalizada: A IA analisa os objetivos e o perfil do usuário para recomendar o curso ideal.
 
 Qualificação de Leads: O assistente faz perguntas estratégicas para qualificar o interesse e a necessidade do cliente.
@@ -15,7 +15,7 @@ Redirecionamento para Vendas: Após a recomendação, o assistente fornece um li
 
 Interface de Chat Intuitiva: Construído com Streamlit para uma experiência de usuário limpa e amigável.
 
-🛠️ Tecnologias Utilizadas
+## 🛠️ Tecnologias Utilizadas
 
 Linguagem: Python
 
@@ -23,7 +23,7 @@ Framework da Aplicação: Streamlit
 
 Inteligência Artificial: Google Gemini (via API google-generativeai)
 
-⚙️ Guia de Instalação e Execução
+## ⚙️ Guia de Instalação e Execução
 Para executar este projeto em seu ambiente local, siga os passos abaixo.
 
 1. Pré-requisitos
@@ -68,7 +68,7 @@ Abra o arquivo .streamlit/secrets.toml e adicione sua chave de API no seguinte f
 
 Ini, TOML
 
-# Substitua o texto pela sua chave de API real
+## Substitua o texto pela sua chave de API real
 GOOGLE_API_KEY = "SUA_CHAVE_DE_API_AQUI"
 Importante: O diretório .streamlit não deve ser enviado para o GitHub. O arquivo .gitignore do projeto já está configurado para ignorá-lo, garantindo a segurança de sua chave.
 
