@@ -1,8 +1,11 @@
 import streamlit as st
 import google.generativeai as genai
+import os
+from dotenv import load_dotenv
 
+load_dotenv()
 
-genai.configure(api_key="AIzaSyCheDMzzmFTsnXKnfLCBEf3OMvb5gB-Y2Q")
+genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
 CATALOGO_DE_CURSOS = """
 Curso 1: Marketing Digital para Concessionárias 101
