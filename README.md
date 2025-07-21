@@ -26,7 +26,7 @@ Inteligência Artificial: Google Gemini (via API google-generativeai)
 ## ⚙️ Guia de Instalação e Execução
 Para executar este projeto em seu ambiente local, siga os passos abaixo.
 
-1. Pré-requisitos
+# 1. Pré-requisitos
 Antes de começar, certifique-se de que você tem:
 
 Python 3.8 ou superior instalado.
@@ -35,20 +35,21 @@ Git instalado em sua máquina.
 
 Uma chave de API do Google AI Studio. Se não tiver uma, você pode obtê-la gratuitamente aqui.
 
-2. Clone o Repositório
+# 2. Clone o Repositório
 Abra seu terminal e clone este repositório para sua máquina local.
 
 Bash
 
 git clone https://github.com/GabrielRenanPE/AEGia.git
 cd AEGia
-3. Instale as Dependências
+
+# 3. Instale as Dependências
 Com o ambiente virtual de sua preferência ativado, instale todas as bibliotecas necessárias com um único comando:
 
 Bash
 
 pip install -r requirements.txt
-4. Configure sua Chave de API (Passo Crucial)
+# 4. Configure sua Chave de API (Passo Crucial)
 Para que a aplicação possa se conectar à IA do Google, você precisa configurar sua chave de API de forma segura usando o sistema de segredos nativo do Streamlit.
 
 Na raiz do projeto, crie uma pasta chamada .streamlit.
@@ -72,7 +73,7 @@ Ini, TOML
 GOOGLE_API_KEY = "SUA_CHAVE_DE_API_AQUI"
 Importante: O diretório .streamlit não deve ser enviado para o GitHub. O arquivo .gitignore do projeto já está configurado para ignorá-lo, garantindo a segurança de sua chave.
 
-5. Execute a Aplicação
+# 5. Execute a Aplicação
 Com tudo configurado, inicie o servidor do Streamlit com o comando:
 
 Bash
